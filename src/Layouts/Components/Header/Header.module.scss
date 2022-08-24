@@ -286,9 +286,8 @@
 }
 
 .nav-list {
-    display: grid;
     position: absolute;
-    opacity: 0;
+    display: none;
     width: 770px;
     background-color: #fff;
     border-radius: 4px;
@@ -300,7 +299,7 @@
 }
 
 .item-list:hover .nav-list {
-    opacity: 1;
+    display: grid;
 }
 
 .item-children:first-child {
