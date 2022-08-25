@@ -1,7 +1,7 @@
 import Config from '~/Config';
 
 //Pages
-import Home from '~/Pages/Home';
+import Home from '~/Pages/HomeFix';
 
 // Public Routes
 const PublicRoutes = [{ path: Config.routes.home, component: Home }];
