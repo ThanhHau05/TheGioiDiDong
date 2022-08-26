@@ -5,6 +5,7 @@ import { Images } from '~/Images';
 import Slick from '~/components/Slick';
 import { ImagesSlick } from '~/Images/Slick';
 import { useEffect, useState } from 'react';
+import DealNgonMoiNgay from '~/components/DealNgonMoiNgay';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -43,9 +44,9 @@ const BUTTON_TIMELINE = [
 
 function HomeFix() {
     const [showimage, setShowImage] = useState('');
-    const [hour, setHour] = useState();
-    const [minute, setMinute] = useState();
-    const [second, setSecond] = useState();
+    const [hour, setHour] = useState(0);
+    const [minute, setMinute] = useState(0);
+    const [second, setSecond] = useState(0);
     const [timeline, setTimeLine] = useState(0);
     let hourvalue = 1;
     let minutevalue = 26;
@@ -77,6 +78,8 @@ function HomeFix() {
                 setMinute(minutevalue);
             }
             if (minutevalue === '-1') {
+                minutevalue = 59;
+                setMinute(minutevalue);
                 // eslint-disable-next-line react-hooks/exhaustive-deps
                 hourvalue = hourvalue - 1;
                 setHour(hourvalue);
@@ -89,7 +92,7 @@ function HomeFix() {
         return () => {
             clearInterval(timer);
         };
-    });
+    }, []);
     const _handleOptionPromo = () => {
         return OPTION_PROMO.map((item, index) => (
             <li key={index}>
@@ -154,6 +157,7 @@ function HomeFix() {
                     </div>
                     <div className={cx('timeline-container')}>{_handleButtonTimeLine()}</div>
                 </div>
+                <DealNgonMoiNgay />
             </div>
         </div>
     );

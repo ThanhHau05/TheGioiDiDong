@@ -1,0 +1,36 @@
+.container {
+    background-color: #fcc815;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    padding-bottom: 1px;
+}
+.product-container {
+    padding: 10px;
+}
+
+.button-more {
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #333;
+    width: 340px;
+    text-align: center;
+    margin: 5px auto 15px;
+}
+
+.button-more span::after {
+    position: absolute;
+    content: '';
+    border-left: 5px solid #333;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    right: 0;
+    top: calc(50% - 5px);
+}
+
+.button-more span {
+    position: relative;
+    padding-right: 15px;
+}

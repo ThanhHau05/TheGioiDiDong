@@ -1,0 +1,161 @@
+.image-product {
+    width: 100%;
+    transition: all 300ms ease-in-out;
+}
+
+.insurance,
+.new-released {
+    position: absolute;
+    bottom: 0;
+    width: 45px;
+    height: 45px;
+    transition: all 300ms ease-in-out;
+}
+
+.item-img {
+    position: relative;
+    height: 220px;
+    margin-bottom: 10px;
+    line-height: 220px;
+    display: flex;
+    align-items: center;
+}
+
+.product {
+    cursor: pointer;
+    padding: 10px 10px 20px;
+    margin: 0 5px;
+    background-color: #fff;
+    border-radius: 4px;
+    &:hover h3 {
+        color: #288ad6;
+    }
+    &:hover .image-product {
+        margin-bottom: 8px;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover .new-released {
+        margin-bottom: 8px;
+        transition: all 300ms ease-in-out;
+    }
+    &:hover .insurance {
+        margin-bottom: 8px;
+        transition: all 300ms ease-in-out;
+    }
+}
+
+.item-installment {
+    height: 23px;
+    font-size: 0;
+}
+
+.item-installment span {
+    font-size: 11px;
+    padding: 3px;
+    color: #333;
+    margin-right: 4px;
+    background-color: #f1f1f1;
+    border-radius: 2px;
+}
+
+.product h3 {
+    font-size: 14px;
+    color: #333;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.item-preorder {
+    font-size: 11px;
+    color: #fff;
+    background-color: #e91e63;
+    padding: 0 5px;
+    border-radius: 4px;
+    display: inline-block;
+    max-width: 90%;
+    margin: 0 4px 8px 0;
+}
+
+.blue {
+    background: linear-gradient(to right, #3bacf0, #1b6dc1);
+}
+
+.item-result img {
+    max-width: 20px;
+    float: left;
+}
+
+.item-result span {
+    font-size: 10px;
+    padding: 4px 0 0 3px;
+    margin-left: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    display: -webkit-box;
+}
+
+.item-result {
+    border-radius: 20px;
+    display: inline-block;
+    padding-right: 8px;
+    margin-bottom: 10px;
+}
+
+.red {
+    background: linear-gradient(to right, #ef3006, #c60004);
+}
+
+.item-text-online {
+    font-size: 14px;
+    color: #666;
+}
+
+.price {
+    font-size: 18px;
+    color: #d0021c;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.price small {
+    margin-left: 7px;
+    color: #eb5757;
+    background-color: #fff0e9;
+    padding: 1px 2px 2px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.insurance {
+    top: 15%;
+    right: 0;
+}
+
+.icon-vote {
+    vertical-align: middle;
+    margin: 0 10px 2px 5px;
+    background: url('./iconnew.png') no-repeat;
+    display: inline-block;
+    background-position: -129px 0;
+    width: 12px;
+    height: 12px;
+    background-size: 310px 257px;
+}
+
+.item-vote {
+    font-size: 14px;
+    color: #fb6e2e;
+}
+
+.item-vote b {
+    vertical-align: middle;
+}
+
+.item-vote span {
+    color: #999;
+}
+
+.gift {
+    font-size: 14px;
+    color: #666;
+}

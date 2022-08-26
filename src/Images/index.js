@@ -4,6 +4,7 @@ import TopZone from './desk-1200x100-1200x100.png';
 import TraiHeSale from './Trai-79x271-2.png';
 import PhaiHeSale from './Phai-79x271-7.png';
 import Lightning from './lightning-ic.png';
+import DealNMN from './TGDD---Tagline-hotsale-1200x95-1200x95.png';
 
 export const Images = {
     IconTGDD,
@@ -12,4 +13,5 @@ export const Images = {
     TraiHeSale,
     PhaiHeSale,
     Lightning,
+    DealNMN,
 };
