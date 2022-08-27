@@ -46,6 +46,10 @@ function Slick({ images }) {
             }
             setCount((prev) => (prev === 2.5 ? 0 : prev + 1));
         } else if (event.target.id === 'prev') {
+            if (count === 0.5) {
+                setCount(0);
+                return;
+            }
             setCount((prev) => (prev === 0 ? 2.5 : prev - 1));
         }
     };
