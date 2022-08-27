@@ -6,6 +6,7 @@ import Slick from '~/components/Slick';
 import { ImagesSlick } from '~/Images/Slick';
 import { useEffect, useState } from 'react';
 import DealNgonMoiNgay from '~/components/DealNgonMoiNgay';
+import TuanLeVangVivo from '~/components/TuanLeVangVivo';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -158,6 +159,7 @@ function HomeFix() {
                     <div className={cx('timeline-container')}>{_handleButtonTimeLine()}</div>
                 </div>
                 <DealNgonMoiNgay />
+                <TuanLeVangVivo />
             </div>
         </div>
     );

@@ -19,6 +19,7 @@ export const ImagesDealNgonMoiNgay = [
     //   title: '',
     //   preorder: '',
     //   result: {
+    //     class: '',
     //     image: '',
     //     title: '',
     //   },
@@ -27,7 +28,6 @@ export const ImagesDealNgonMoiNgay = [
     //   discount: '',
     //   gift: '',
     //   vote: {
-    //     class: '',
     //     vote: '',
     //     numbervote: '',
     //   }

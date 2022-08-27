@@ -33,6 +33,7 @@ const Product = (images, width_product, height_product) => {
                         {item.price}₫{item.discount && <small>{item.discount}</small>}
                     </strong>
                     {item.gift && <p className={cx('gift')}>{item.gift}</p>}
+                    {item.twoprice && <p className={cx('twoprice')}>{item.twoprice}</p>}
                     {item.vote && (
                         <p className={cx('item-vote')}>
                             <b>{item.vote.vote}</b>
