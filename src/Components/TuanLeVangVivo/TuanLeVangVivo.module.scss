@@ -29,6 +29,7 @@
     width: 383.33px;
     height: 202px;
     cursor: pointer;
+    pointer-events: none;
 }
 
 .product-container {
@@ -45,4 +46,8 @@
     font-size: 14px;
     color: #333;
     cursor: pointer;
+}
+
+.product-wrap {
+    overflow: hidden;
 }

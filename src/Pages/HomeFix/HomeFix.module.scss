@@ -11,7 +11,6 @@
 
 .wrapper {
     background-color: #f3f3f3;
-    height: 2000px;
 }
 
 .main-container {
@@ -199,4 +198,225 @@
 
 .timeline-container div {
     cursor: pointer;
+}
+
+.shopping-trends {
+    background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+    margin-bottom: 30px;
+    border-radius: 14px;
+}
+
+.ingredient-title {
+    font-size: 22px;
+    padding: 15px 22px;
+    color: #333;
+    line-height: 36px;
+    display: block;
+}
+
+.shopping-trends ul {
+    display: flex;
+    justify-content: center;
+    padding: 0 22px 30px;
+}
+
+.shopping-trends ul li {
+    position: relative;
+    list-style: none;
+    margin-right: 12px;
+    height: 236px;
+    cursor: pointer;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.shopping-trends li img {
+    border-radius: 10px;
+}
+
+.shopping-trends ul li p {
+    position: absolute;
+    left: 18px;
+    display: flex;
+    flex-direction: column;
+    bottom: 22px;
+    line-height: 30px;
+}
+
+.shopping-trends ul li p span {
+    font-size: 16px;
+    color: #333;
+}
+
+.shopping-trends ul li p strong {
+    font-size: 17px;
+    color: #2f80ed;
+    font-weight: normal;
+}
+
+.cate-feature {
+    margin-bottom: 30px;
+    border-radius: 14px;
+    background-color: #fff;
+}
+
+.cate-feature-container {
+    padding: 0 40px 30px;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.cate-feature-container h3 {
+    padding: 10px 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cate-feature-container img {
+    height: 60px;
+    margin: 0 auto 8px;
+    display: block;
+}
+
+.cate-feature-container span {
+    padding: 0 5px;
+    display: block;
+}
+
+.discount-payonl strong {
+    padding: 0 0 15px;
+}
+
+.discount-payonl-image img {
+    border-radius: 12px;
+    width: 380px;
+}
+
+.discount-payonl-image {
+    display: flex !important;
+    justify-content: center;
+}
+
+.discount-payonl {
+    margin-bottom: 30px;
+}
+
+.convenient-service {
+    background-color: #fff;
+    border-radius: 14px;
+    margin-bottom: 30px;
+}
+
+.convenient-service strong p {
+    cursor: pointer;
+    font-size: 16px;
+    color: #555;
+    font-weight: normal;
+    float: right;
+    &::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        display: inline-block;
+        transform: rotate(45deg);
+        border-top: 1px solid #555;
+        border-right: 1px solid #555;
+        vertical-align: middle;
+        margin: 0 0 2px 5px;
+    }
+}
+
+.convenient-service ul {
+    display: flex;
+    justify-content: center;
+    padding: 0 22px 30px;
+}
+
+.convenient-service ul li {
+    cursor: pointer;
+    list-style: none;
+    width: 283px;
+    padding: 14px 10px;
+    margin-right: 12px;
+    border-radius: 14px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+[class^='HomeFix_service-'] {
+    background: url('./iconnew.png') no-repeat;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: middle;
+    background-size: 310px 257px;
+}
+
+.item-service-card {
+    background: #dceeff;
+}
+
+.service-card {
+    background-position: -273px -89px;
+}
+
+.item-service-money {
+    background: #fef5cf;
+}
+
+.service-money {
+    background-position: -273px -133px;
+}
+
+.item-service-game {
+    background: #ffefdb;
+}
+
+.service-game {
+    background-position: -272px -175px;
+}
+
+.item-service-ticket {
+    background: #e1fecf;
+}
+
+.service-ticket {
+    background-position: -273px -219px;
+}
+
+.service-container {
+    float: left;
+    width: 38px;
+    margin-right: 12px;
+    background: none;
+}
+
+.text-service-container {
+    overflow: hidden;
+}
+
+.text-service-container h3 {
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    line-height: 25px;
+    padding: 6px 0 12px;
+}
+
+.text-service-container p strong {
+    color: #ff0b0b;
+}
+
+.text-service-container p {
+    width: 210px;
+    font-size: 18px;
+    font-weight: normal;
+    color: #333;
+    line-height: 25px;
 }

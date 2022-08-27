@@ -7,6 +7,12 @@ import { ImagesSlick } from '~/Images/Slick';
 import { useEffect, useState } from 'react';
 import DealNgonMoiNgay from '~/components/DealNgonMoiNgay';
 import TuanLeVangVivo from '~/components/TuanLeVangVivo';
+import { XU_HUONG_MUA_SAM } from '~/Images/XuHuongMuaSam';
+import { DANH_MUC_NOI_BAT } from '~/Images/DanhMucNoiBat';
+import Slider from 'react-slick';
+import { ImagesSliderPayOnline } from '~/Images/PayOnline';
+import ButtonCircleNextArrow from '~/components/ButtonCircleNextArrow';
+import ButtonCirclePrevArrow from '~/components/ButtonCirclePrevArrow';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -40,6 +46,31 @@ const BUTTON_TIMELINE = [
     {
         title: 'Đang diễn ra',
         time: '14:00 - 16:00',
+    },
+];
+
+const DICH_VU_TIEN_ICH = [
+    {
+        class: 'service-card',
+        title: 'Mua Mã thẻ cào',
+        text_strong: 'Giảm 3%',
+        text: ' cho mệnh giá từ 100.000 trở lên',
+    },
+    {
+        class: 'service-money',
+        title: 'Dịch Vụ Đóng Tiền',
+        text: 'Điện, Nước, Internet, Cước điện thoại trả sau',
+    },
+    {
+        class: 'service-game',
+        title: 'Mua thẻ game',
+        text_strong: 'Giảm 2%',
+        text: ' cho tất cả nhà mạng, áp dụng cho mệnh giá từ 300.000 trở lên',
+    },
+    {
+        class: 'service-ticket',
+        title: 'Vé máy bay, tàu',
+        text: 'Thu hộ tiền vé xe, vé tàu, vé máy bay',
     },
 ];
 
@@ -122,6 +153,60 @@ function HomeFix() {
             </div>
         ));
     };
+    const _handleItemXuHuongMuaSam = () => {
+        return XU_HUONG_MUA_SAM.map((item, index) => (
+            <li key={index}>
+                <img src={item.image} alt={item.title} />
+                <p>
+                    <span>{item.title}</span>
+                    <strong>{item.text}</strong>
+                </p>
+            </li>
+        ));
+    };
+    const _handleItemDanhMucNoiBat = () => {
+        return DANH_MUC_NOI_BAT.map((item, index) => (
+            <h3 key={index}>
+                <img src={item.image} alt="" />
+                <span>{item.title}</span>
+            </h3>
+        ));
+    };
+    const _handleImagesPayOnline = () => {
+        return ImagesSliderPayOnline.map((item, index) => (
+            <div key={index} className={cx('discount-payonl-image')}>
+                <img src={item} alt="" />
+            </div>
+        ));
+    };
+    const settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: true,
+        speed: 500,
+        autoplaySpeed: 5000,
+        cssEase: 'linear',
+        nextArrow: <ButtonCircleNextArrow />,
+        prevArrow: <ButtonCirclePrevArrow />,
+    };
+    const _handleItemDichVuTienIch = () => {
+        return DICH_VU_TIEN_ICH.map((item, index) => (
+            <li key={index} className={cx('item-' + item.class)}>
+                <div className={cx('service-container')}>
+                    <i className={cx(item.class)}></i>
+                </div>
+                <div className={cx('text-service-container')}>
+                    <h3>{item.title}</h3>
+                    <p>
+                        <strong>{item.text_strong}</strong>
+                        {item.text}
+                    </p>
+                </div>
+            </li>
+        ));
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('banner')}>
@@ -160,6 +245,26 @@ function HomeFix() {
                 </div>
                 <DealNgonMoiNgay />
                 <TuanLeVangVivo />
+                <div className={cx('shopping-trends')}>
+                    <strong className={cx('ingredient-title')}>XU HƯỚNG MUA SẮM</strong>
+                    <ul>{_handleItemXuHuongMuaSam()}</ul>
+                </div>
+                <div className={cx('cate-feature')}>
+                    <strong className={cx('ingredient-title')}>DANH MỤC NỔI BẬT</strong>
+                    <div className={cx('cate-feature-container')}>{_handleItemDanhMucNoiBat()}</div>
+                </div>
+                <div className={cx('discount-payonl')}>
+                    <strong className={cx('ingredient-title')}>GIẢM THÊM KHI THANH TOÁN ONLINE</strong>
+                    <div className={cx('discount-payonl-container')}>
+                        <Slider {...settings}>{_handleImagesPayOnline()}</Slider>
+                    </div>
+                </div>
+                <div className={cx('convenient-service')}>
+                    <strong className={cx('ingredient-title')}>
+                        DỊCH VỤ TIỆN ÍCH<p>XEM THEM DỊCH VỤ</p>
+                    </strong>
+                    <ul>{_handleItemDichVuTienIch()}</ul>
+                </div>
             </div>
         </div>
     );

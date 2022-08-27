@@ -8,14 +8,15 @@ import { ImagesTuanLeVangVivo } from '~/Images/TuanLeVangVivo';
 import Product from '../Product';
 import ButtonPrevArrow from '../ButtonPrevArrow';
 import ButtonNextArrow from '../ButtonNextArrow';
+import { motion } from 'framer-motion';
 const cx = classNames.bind(styles);
 
 function TuanLeVangVivo() {
     const _handleSlider = () => {
         return ImagesSliderTuanLeVangVivo.map((item, index) => (
-            <div key={index} className={cx('image-slider')}>
+            <motion.div key={index} className={cx('image-slider')}>
                 <img src={item} alt="" />
-            </div>
+            </motion.div>
         ));
     };
     const settings = {
@@ -31,7 +32,15 @@ function TuanLeVangVivo() {
         <div className={cx('container')}>
             <p>TUẦN LỄ VÀNG VIVO</p>
             <div className={cx('main-container')}>
-                <div className={cx('image-slider-container')}>{_handleSlider()}</div>
+                <motion.div className={cx('product-wrap')}>
+                    <motion.div
+                        className={cx('image-slider-container')}
+                        drag="x"
+                        dragConstraints={{ right: 0, left: 0 }}
+                    >
+                        {_handleSlider()}
+                    </motion.div>
+                </motion.div>
                 <div className={cx('product-container')}>
                     <Slider {...settings}>{Product(ImagesTuanLeVangVivo, '236px', '412px')}</Slider>
                 </div>
