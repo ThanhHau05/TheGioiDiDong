@@ -1,0 +1,40 @@
+.button-suggestions-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-suggestions {
+    width: 285px;
+    height: 70px;
+    font-size: 14px;
+    padding: 8px 0;
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-suggestions img {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.button-suggestions span {
+    color: #555;
+    font-size: 18px;
+    padding-top: 8px;
+    margin-left: 5px;
+}
+
+.button-suggestions.active {
+    background: linear-gradient(64.85deg, #fca600 23.67%, #ffd41d 106.12%);
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 16px;
+    margin-top: 16px;
+}

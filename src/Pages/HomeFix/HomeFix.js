@@ -13,6 +13,8 @@ import Slider from 'react-slick';
 import { ImagesSliderPayOnline } from '~/Images/PayOnline';
 import ButtonCircleNextArrow from '~/components/ButtonCircleNextArrow';
 import ButtonCirclePrevArrow from '~/components/ButtonCirclePrevArrow';
+import { ImagesButton } from '~/Images/GoiYHomNay/Button';
+import GoiYHomNay from '~/components/GoiYHomNay';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -207,6 +209,7 @@ function HomeFix() {
             </li>
         ));
     };
+
     return (
         <div className={cx('wrapper')}>
             <div className={cx('banner')}>
@@ -264,6 +267,13 @@ function HomeFix() {
                         DỊCH VỤ TIỆN ÍCH<p>XEM THEM DỊCH VỤ</p>
                     </strong>
                     <ul>{_handleItemDichVuTienIch()}</ul>
+                </div>
+                <div className={cx('suggestions')}>
+                    <strong className={cx('ingredient-title')}>GỢI Ý HÔM NAY</strong>
+                    <GoiYHomNay />
+                    <div className={cx('more-suggestions')}>
+                        <span>Xem tất cả</span>
+                    </div>
                 </div>
             </div>
         </div>
