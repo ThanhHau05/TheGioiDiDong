@@ -95,7 +95,8 @@
     background: #ff685f;
     border-radius: 12px;
     margin-bottom: 30px;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
 }
 
 .gvdshock-container h3 {
@@ -432,4 +433,5 @@
     padding: 15px 20px;
     text-align: center;
     font-size: 14px;
+    cursor: pointer;
 }

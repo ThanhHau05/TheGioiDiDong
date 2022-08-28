@@ -13,8 +13,9 @@ import Slider from 'react-slick';
 import { ImagesSliderPayOnline } from '~/Images/PayOnline';
 import ButtonCircleNextArrow from '~/components/ButtonCircleNextArrow';
 import ButtonCirclePrevArrow from '~/components/ButtonCirclePrevArrow';
-import { ImagesButton } from '~/Images/GoiYHomNay/Button';
 import GoiYHomNay from '~/components/GoiYHomNay';
+import ProductFlashSale from '~/components/ProductFlashSale';
+import { ImagesProductFlashSale } from '~/Images/ProductFlashSale';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -209,7 +210,12 @@ function HomeFix() {
             </li>
         ));
     };
-
+    const settingsdeal = {
+        dots: false,
+        rows: 2,
+        slidesPerRow: 6,
+        infinite: false,
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('banner')}>
@@ -230,21 +236,26 @@ function HomeFix() {
                     <img src={Images.TopZone} alt="" />
                 </div>
                 <div className={cx('flashsale-container')}>
-                    <div className={cx('gvdshock-container')}>
-                        <div className={cx('lightning-image')}>
-                            <img width="32" height="70" src={Images.Lightning} alt="lightning" />
+                    <div>
+                        <div className={cx('gvdshock-container')}>
+                            <div className={cx('lightning-image')}>
+                                <img width="32" height="70" src={Images.Lightning} alt="lightning" />
+                            </div>
+                            <h3>GIỜ VÀNG DEAL SỐC</h3>
+                            <div className={cx('endtime-container')}>
+                                <span className={cx('label-endtime')}>Kết thúc trong</span>
+                                <span className={cx('coutdown-time')}>
+                                    <label>0{hour}</label>
+                                    <label>{minute}</label>
+                                    <label>{second}</label>
+                                </span>
+                            </div>
                         </div>
-                        <h3>GIỜ VÀNG DEAL SỐC</h3>
-                        <div className={cx('endtime-container')}>
-                            <span className={cx('label-endtime')}>Kết thúc trong</span>
-                            <span className={cx('coutdown-time')}>
-                                <label>0{hour}</label>
-                                <label>{minute}</label>
-                                <label>{second}</label>
-                            </span>
-                        </div>
+                        <div className={cx('timeline-container')}>{_handleButtonTimeLine()}</div>
                     </div>
-                    <div className={cx('timeline-container')}>{_handleButtonTimeLine()}</div>
+                    <div className={cx('timeline-product-container')}>
+                        <Slider {...settingsdeal}>{ProductFlashSale(ImagesProductFlashSale)}</Slider>
+                    </div>
                 </div>
                 <DealNgonMoiNgay />
                 <TuanLeVangVivo />
