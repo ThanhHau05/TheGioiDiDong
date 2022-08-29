@@ -1,0 +1,49 @@
+.showPromoteBHX-container {
+    background-color: #008847;
+    border: 6px solid #008847;
+}
+
+.dotnew {
+    background-color: #ffe66b;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    position: absolute;
+    left: 10px;
+}
+
+.title {
+    display: block;
+    padding: 10px 170px 10px 35px;
+    color: #fff;
+    position: relative;
+}
+
+.dotnew-animation {
+    width: 8px;
+    height: 8px;
+    // border: 1px solid #ffe66b;
+    box-shadow: 0 0 0 1.2px #ffe66b;
+    border-radius: 100%;
+    display: block;
+    background-color: rgba(255, 230, 107, 0.2);
+    animation: sonar 1.25s linear infinite;
+}
+
+@keyframes sonar {
+    0% {
+        opacity: 0.3;
+        box-shadow: 0 0 0 1.2px #ffe66b;
+    }
+    40% {
+        opacity: 0.5;
+    }
+    // 50% {
+    //     opacity: 0.5;
+    // }
+    100% {
+        box-shadow: 0 0 0 1.2px #ffe66b;
+        transform: scale(3.1);
+        opacity: 0;
+    }
+}

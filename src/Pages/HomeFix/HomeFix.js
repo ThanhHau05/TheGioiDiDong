@@ -16,6 +16,11 @@ import ButtonCirclePrevArrow from '~/components/ButtonCirclePrevArrow';
 import GoiYHomNay from '~/components/GoiYHomNay';
 import ProductFlashSale from '~/components/ProductFlashSale';
 import { ImagesProductFlashSale } from '~/Images/ProductFlashSale';
+import post4, { Post24hCongNghe } from '~/Images/24hCongNghe';
+import { ImagesTradeMark } from '~/Images/TradeMark';
+import { motion } from 'framer-motion';
+import { ImagesSliderDealKhung } from '~/Images/DealKhung';
+import ShowPromoteBHX from '~/components/ShowPromoteBHX';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -175,8 +180,8 @@ function HomeFix() {
             </h3>
         ));
     };
-    const _handleImagesPayOnline = () => {
-        return ImagesSliderPayOnline.map((item, index) => (
+    const _handleImagesPayOnline = (value) => {
+        return value.map((item, index) => (
             <div key={index} className={cx('discount-payonl-image')}>
                 <img src={item} alt="" />
             </div>
@@ -215,6 +220,21 @@ function HomeFix() {
         rows: 2,
         slidesPerRow: 6,
         infinite: false,
+    };
+    const _handleItemPost24HcongNghe = () => {
+        return Post24hCongNghe.map((item, index) => (
+            <li key={index}>
+                <img src={item.image} alt={item.title} />
+                <span> {item.title}</span>
+            </li>
+        ));
+    };
+    const _handleImagesTradeMark = () => {
+        return ImagesTradeMark.map((item, index) => (
+            <motion.div key={index} className={cx('trademark-image')}>
+                <img src={item} alt="" />
+            </motion.div>
+        ));
     };
     return (
         <div className={cx('wrapper')}>
@@ -270,7 +290,7 @@ function HomeFix() {
                 <div className={cx('discount-payonl')}>
                     <strong className={cx('ingredient-title')}>GIẢM THÊM KHI THANH TOÁN ONLINE</strong>
                     <div className={cx('discount-payonl-container')}>
-                        <Slider {...settings}>{_handleImagesPayOnline()}</Slider>
+                        <Slider {...settings}>{_handleImagesPayOnline(ImagesSliderPayOnline)}</Slider>
                     </div>
                 </div>
                 <div className={cx('convenient-service')}>
@@ -286,6 +306,34 @@ function HomeFix() {
                         <span>Xem tất cả</span>
                     </div>
                 </div>
+                <div className={cx('h24-technology')}>
+                    <div className={cx('h24-technology-container')}>
+                        <strong className={cx('ingredient-title')}>
+                            24H CÔNG NGHỆ<p>XEM TẤT CẢ</p>
+                        </strong>
+                        <ul>{_handleItemPost24HcongNghe()}</ul>
+                    </div>
+                    <img src={post4} alt="" />
+                </div>
+                <div className={cx('trademark')}>
+                    <strong className={cx('ingredient-title')}>CHUYÊN TRANG THƯƠNG HIỆU</strong>
+                    <motion.div className={cx('trademark-wrap')}>
+                        <motion.div
+                            className={cx('trademark-container')}
+                            drag="x"
+                            dragConstraints={{ right: 0, left: 0 }}
+                        >
+                            {_handleImagesTradeMark()}
+                        </motion.div>
+                    </motion.div>
+                </div>
+                <div className={cx('discount-payonl', 'newchain')}>
+                    <strong className={cx('ingredient-title')}>CHUỖI MỚI DEAL KHỦNG</strong>
+                    <div className={cx('discount-payonl-container')}>
+                        <Slider {...settings}>{_handleImagesPayOnline(ImagesSliderDealKhung)}</Slider>
+                    </div>
+                </div>
+                <ShowPromoteBHX />
             </div>
         </div>
     );
