@@ -21,6 +21,8 @@ import { ImagesTradeMark } from '~/Images/TradeMark';
 import { motion } from 'framer-motion';
 import { ImagesSliderDealKhung } from '~/Images/DealKhung';
 import ShowPromoteBHX from '~/components/ShowPromoteBHX';
+import ButtonPrevArrow from '~/components/ButtonPrevArrow';
+import ButtonNextArrow from '~/components/ButtonNextArrow';
 const cx = classNames.bind(styles);
 const OPTION_PROMO = [
     {
@@ -220,6 +222,8 @@ function HomeFix() {
         rows: 2,
         slidesPerRow: 6,
         infinite: false,
+        nextArrow: <ButtonNextArrow classdeal />,
+        prevArrow: <ButtonPrevArrow classdeal />,
     };
     const _handleItemPost24HcongNghe = () => {
         return Post24hCongNghe.map((item, index) => (

@@ -3,6 +3,7 @@ import Header from '../Components/Header';
 import styles from './DefaultLayout.module.scss';
 import classNames from 'classnames/bind';
 import Footer from '~/Layouts/Components/Footer';
+import Messages from '~/components/Messages';
 const cx = classNames.bind(styles);
 
 function DefaultLayout({ children }) {
@@ -20,6 +21,7 @@ function DefaultLayout({ children }) {
                     <span> Xem chính sách sử dụng</span>
                 </p>
             </div>
+            <Messages />
         </div>
     );
 }
