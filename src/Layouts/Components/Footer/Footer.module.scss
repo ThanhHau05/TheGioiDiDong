@@ -1,0 +1,203 @@
+.Footer {
+    border-top: 1px solid #e2e2e2;
+    background-color: #fff;
+}
+
+.container {
+    padding: 15px 0 5px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.list-item-container li {
+    list-style: none;
+}
+
+.container ul {
+    display: flex;
+}
+
+.icon {
+    background: url('./Images/icon_common@2x.png') no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 300px 200px;
+}
+
+.logo {
+    height: 24px;
+    width: 80px;
+    background: url('./Images/Logo-webmoi.png') no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    background-size: 250px 200px;
+}
+
+.lazyloaded {
+    background-image: url('./Images/handle_cert.png');
+    background-size: 85px 39px;
+    width: 85px;
+    height: 39px;
+}
+
+.facebook {
+    background-position: -225px 0;
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
+.youtube {
+    background-position: -200px 0;
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+
+.congthuong {
+    background-position: -200px -30px;
+    height: 24px;
+    width: 79px;
+}
+
+.khieunai {
+    background-position: -250px 0;
+    height: 25px;
+    width: 25px;
+}
+
+.protected {
+    background-position: -80px -60px;
+    height: 24px;
+    width: 122px;
+}
+
+.topzone {
+    background-position: 0 -58px;
+}
+
+.dienmayxanh {
+    background-position: -85px 0;
+}
+
+.bachhoaxanh {
+    background-position: -170px 0;
+}
+
+.ankhang {
+    background-position: -85px -90px;
+}
+
+.kids {
+    background-position: -170px -29px;
+}
+
+.sport {
+    background-position: 0 -29px;
+}
+
+.tantam {
+    background-position: -170px -90px;
+}
+
+.cs4kfarm {
+    background-position: 0 -90px;
+}
+
+.vieclam {
+    background-position: 0 -120px;
+}
+
+.list-item-container {
+    &:first-child {
+        width: 24%;
+    }
+    &:nth-child(2) {
+        width: 24%;
+    }
+    &:nth-child(3) {
+        width: 23%;
+    }
+}
+
+.list-item-container li {
+    font-size: 14px;
+    line-height: 21px;
+    color: #333;
+    margin-bottom: 10px;
+    cursor: pointer;
+    &:hover {
+        color: #2f80ed;
+    }
+}
+
+.list-item-container li p {
+    cursor: auto;
+    &:hover {
+        color: #333;
+    }
+}
+
+.list-item-container li p strong {
+    cursor: pointer;
+    color: #2f80ed;
+    margin: 0 5px;
+}
+
+.list-item-container li p span {
+    width: 65px;
+    display: inline-block;
+}
+
+.list-item-container li p b {
+    margin-right: 5px;
+}
+
+.list-item-more {
+    position: relative;
+    &::after {
+        position: absolute;
+        content: '';
+        border-top: 5px solid #333;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        bottom: 7px;
+        margin-left: 5px;
+    }
+}
+
+.item-more {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.list-item-container:last-child {
+    & div:first-child {
+        display: flex;
+        & span {
+            color: #2f80ed;
+            margin-right: 10px;
+        }
+    }
+    & div:nth-child(2) {
+        display: flex;
+        margin-bottom: 20px;
+        & span {
+            margin-right: 8px;
+        }
+    }
+    & div:nth-child(3) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        & li:first-child {
+            grid-column: 1/5;
+        }
+        & li {
+            margin-right: 8px;
+        }
+    }
+}
