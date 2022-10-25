@@ -320,7 +320,7 @@ function HomeFix() {
                     <img src={post4} alt="" />
                 </div>
                 <div className={cx('trademark')}>
-                    <strong className={cx('ingredient-title')}>CHUYÊN TRANG THƯƠNG HIỆUhjhhjhjjhj</strong>
+                    <strong className={cx('ingredient-title')}>CHUYÊN TRANG THƯƠNG HIỆUdsadsad</strong>
                     <motion.div className={cx('trademark-wrap')}>
                         <motion.div
                             className={cx('trademark-container')}
